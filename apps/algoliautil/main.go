@@ -22,14 +22,11 @@ type Options struct {
 
 func main() {
 	opts := Options{}
-
-	_, err := flags.Parse(&opts)
-	if err != nil {
+	if _, err := flags.Parse(&opts); err != nil {
 		log.Fatal(err)
 	}
 
-	err = config.LoadEnvPathsPrioritized(opts.EnvFile, os.Getenv(ENV_VAR))
-	if err != nil {
+	if err := config.LoadEnvPathsPrioritized(opts.EnvFile, os.Getenv(ENV_VAR)); err != nil {
 		log.Fatal(err)
 	}
 
@@ -53,6 +50,7 @@ func main() {
 	}
 
 	fmtutil.PrintJSON(res)
+	fmt.Printf("NUM_HITS [%v]\n", res.NbHits)
 
 	fmt.Println("DONE")
 }

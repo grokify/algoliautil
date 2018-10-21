@@ -1,0 +1,20 @@
+language: go
+go_import_path: github.com/grokify/algoliautil
+go:
+  - "1.11.x"
+  - "1.10.x"
+  - "1.9.x"
+  - "1.8.x"
+  - master
+matrix:
+  allow_failures:
+    - go: "1.8.x"
+    - go: master
+sudo: true
+before_install:
+  - sudo apt-get update -qq > apt-get.out 2>&1  || (cat apt-get.out && exit 1)
+  - sudo apt-get install libgmp-dev -qq > apt-get.out 2>&1 || (cat apt-get.out && exit 1)
+install:
+  - go get -t -v ./...
+script:
+  - go test -v ./...

@@ -7,6 +7,8 @@ import (
 	"github.com/algolia/algoliasearch-client-go/algoliasearch"
 )
 
+const ENV_VAR_APP_CREDENTIALS_JSON = "ALGOLIA_APP_CREDENTIALS_JSON"
+
 type Credentials struct {
 	ApplicationId    string `json:"applicationId"`
 	SearchOnlyApiKey string `json:"searchOnlyApiKey"`

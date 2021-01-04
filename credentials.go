@@ -4,8 +4,10 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/algolia/algoliasearch-client-go/algoliasearch"
+	"github.com/algolia/algoliasearch-client-go/v3/algolia/search"
 )
+
+// go get github.com/algolia/algoliasearch-client-go/v3@v3.14.0
 
 const ENV_VAR_APP_CREDENTIALS_JSON = "ALGOLIA_APP_CREDENTIALS_JSON"
 
@@ -22,23 +24,23 @@ func NewCredentials(jsonData []byte) (Credentials, error) {
 	return creds, json.Unmarshal(jsonData, &creds)
 }
 
-func NewClientFromJSONAdmin(jsonData []byte) (algoliasearch.Client, error) {
+func NewClientFromJSONAdmin(jsonData []byte) (*search.Client, error) {
 	creds, err := NewCredentials(jsonData)
 	if err != nil {
-		return algoliasearch.NewClient("", ""), err
+		return nil, err
 	}
-	return algoliasearch.NewClient(creds.ApplicationId, creds.AdminApiKey), nil
+	return search.NewClient(creds.ApplicationId, creds.AdminApiKey), nil
 }
 
-func NewClientFromJSONSearchOrAdmin(jsonData []byte) (algoliasearch.Client, error) {
+func NewClientFromJSONSearchOrAdmin(jsonData []byte) (*search.Client, error) {
 	creds, err := NewCredentials(jsonData)
 	if err != nil {
-		return algoliasearch.NewClient("", ""), err
+		return nil, err
 	}
-	if len(creds.SearchOnlyApiKey) > 0 {
-		return algoliasearch.NewClient(creds.ApplicationId, creds.SearchOnlyApiKey), nil
-	} else if len(creds.AdminApiKey) > 0 {
-		return algoliasearch.NewClient(creds.ApplicationId, creds.AdminApiKey), nil
+	if len(creds.AdminApiKey) > 0 {
+		return search.NewClient(creds.ApplicationId, creds.AdminApiKey), nil
+	} else if len(creds.SearchOnlyApiKey) > 0 {
+		return search.NewClient(creds.ApplicationId, creds.SearchOnlyApiKey), nil
 	}
-	return algoliasearch.NewClient("", ""), errors.New("No Algolia Search or Admin API Key")
+	return search.NewClient("", ""), errors.New("No Algolia Search or Admin API Key")
 }

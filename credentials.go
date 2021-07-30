@@ -3,6 +3,7 @@ package algoliautil
 import (
 	"encoding/json"
 	"errors"
+	"strings"
 
 	"github.com/algolia/algoliasearch-client-go/v3/algolia/search"
 )
@@ -19,28 +20,36 @@ type Credentials struct {
 	MonitoringApiKey string `json:"monitoringApiKey"`
 }
 
+func (c Credentials) TrimSpace() {
+	c.ApplicationId = strings.TrimSpace(c.ApplicationId)
+	c.SearchOnlyApiKey = strings.TrimSpace(c.SearchOnlyApiKey)
+	c.AdminApiKey = strings.TrimSpace(c.AdminApiKey)
+	c.AnalyticsApiKey = strings.TrimSpace(c.AnalyticsApiKey)
+	c.MonitoringApiKey = strings.TrimSpace(c.MonitoringApiKey)
+}
+
+func NewClient(c Credentials) (*search.Client, error) {
+	c.TrimSpace()
+	if len(c.ApplicationId) == 0 {
+		return nil, errors.New("no Algolia applicationId")
+	}
+	if len(c.AdminApiKey) > 0 {
+		return search.NewClient(c.ApplicationId, c.AdminApiKey), nil
+	} else if len(c.SearchOnlyApiKey) > 0 {
+		return search.NewClient(c.ApplicationId, c.SearchOnlyApiKey), nil
+	}
+	return nil, errors.New("no Algolia Search or Admin API Key")
+}
+
 func NewCredentials(jsonData []byte) (Credentials, error) {
 	var creds Credentials
 	return creds, json.Unmarshal(jsonData, &creds)
 }
 
-func NewClientFromJSONAdmin(jsonData []byte) (*search.Client, error) {
+func NewClientJSON(jsonData []byte) (*search.Client, error) {
 	creds, err := NewCredentials(jsonData)
 	if err != nil {
 		return nil, err
 	}
-	return search.NewClient(creds.ApplicationId, creds.AdminApiKey), nil
-}
-
-func NewClientFromJSONSearchOrAdmin(jsonData []byte) (*search.Client, error) {
-	creds, err := NewCredentials(jsonData)
-	if err != nil {
-		return nil, err
-	}
-	if len(creds.AdminApiKey) > 0 {
-		return search.NewClient(creds.ApplicationId, creds.AdminApiKey), nil
-	} else if len(creds.SearchOnlyApiKey) > 0 {
-		return search.NewClient(creds.ApplicationId, creds.SearchOnlyApiKey), nil
-	}
-	return search.NewClient("", ""), errors.New("No Algolia Search or Admin API Key")
+	return NewClient(creds)
 }

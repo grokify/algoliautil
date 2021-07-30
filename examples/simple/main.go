@@ -46,7 +46,7 @@ func main() {
 		log.Fatal("No Algolia Credentials")
 	}
 
-	client, err := algoliautil.NewClientFromJSONSearchOrAdmin([]byte(creds))
+	client, err := algoliautil.NewClientJSON([]byte(creds))
 	if err != nil {
 		log.Fatal(err)
 	}

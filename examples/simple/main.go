@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/grokify/algoliautil"
-	"github.com/grokify/simplego/config"
-	"github.com/grokify/simplego/fmt/fmtutil"
+	"github.com/grokify/mogo/config"
+	"github.com/grokify/mogo/fmt/fmtutil"
 	"github.com/jessevdk/go-flags"
 )
 

@@ -20,7 +20,7 @@ type Credentials struct {
 	MonitoringAPIKey string `json:"monitoringApiKey"`
 }
 
-func (c Credentials) TrimSpace() {
+func (c *Credentials) TrimSpace() {
 	c.ApplicationID = strings.TrimSpace(c.ApplicationID)
 	c.SearchOnlyAPIKey = strings.TrimSpace(c.SearchOnlyAPIKey)
 	c.AdminAPIKey = strings.TrimSpace(c.AdminAPIKey)

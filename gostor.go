@@ -17,8 +17,7 @@ type itemKeyValue struct {
 	LastUpdatedTime time.Time `json:"lastUpdatedTime"`
 }
 
-// GostorClient is a client that satisfies the grokify/gostor.Client
-// interface.
+// GostorClient is a client that satisfies the grokify/gostor.Client interface.
 type GostorClient struct {
 	client    *search.Client
 	index     *search.Index

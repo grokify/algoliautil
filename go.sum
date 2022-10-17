@@ -2,13 +2,13 @@ github.com/algolia/algoliasearch-client-go/v3 v3.26.1 h1:8GNK2NGsksIrY9opBSzqR+N
 github.com/algolia/algoliasearch-client-go/v3 v3.26.1/go.mod h1:i7tLoP7TYDmHX3Q7vkIOL4syVse/k5VJ+k0i8WqFiJk=
 github.com/buger/jsonparser v1.1.1 h1:2PnMjfWD7wBILjqQbt530v576A/cAbQvEW9gGIpYMUs=
 github.com/buger/jsonparser v1.1.1/go.mod h1:6RYKKt7H4d4+iWqouImQ9R2FZql3VbhNgx27UK13J/0=
-github.com/caarlos0/env/v6 v6.9.3 h1:Tyg69hoVXDnpO5Qvpsu8EoquarbPyQb+YwExWHP8wWU=
-github.com/caarlos0/env/v6 v6.9.3/go.mod h1:hvp/ryKXKipEkcuYjs9mI4bBCg+UI0Yhgm5Zu0ddvwc=
+github.com/caarlos0/env/v6 v6.10.1 h1:t1mPSxNpei6M5yAeu1qtRdPAK29Nbcf/n3G7x+b3/II=
+github.com/caarlos0/env/v6 v6.10.1/go.mod h1:hvp/ryKXKipEkcuYjs9mI4bBCg+UI0Yhgm5Zu0ddvwc=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/grokify/mogo v0.40.4 h1:IDGRHgRj5eaCsl6na0++xLikRsAgTIpf0cTt49du7fY=
-github.com/grokify/mogo v0.40.4/go.mod h1:tBcnsGpXsAgHo2p5muSoisCNO+GBKPqJ8sW88TEqd3U=
+github.com/grokify/mogo v0.40.5 h1:JmNpy8QCRo6/qLU24HY0kItz9GKrh6bLXGzwdeeidCY=
+github.com/grokify/mogo v0.40.5/go.mod h1:w5vteZTH3+nlVdnCP4NDEeGiuXnx/ASDCsTp2EkmJFU=
 github.com/huandu/xstrings v1.3.2 h1:L18LIDzqlW6xN2rEkpdV8+oL/IXWJ1APd+vsdYy4Wdw=
 github.com/huandu/xstrings v1.3.2/go.mod h1:y5/lhBue+AyNmUVz9RLU9xbLR0o4KIIExikq4ovT0aE=
 github.com/jessevdk/go-flags v1.5.0 h1:1jKYvbxEjfUl0fmqTCOfonvskHHXMjBySTLW4y9LFvc=

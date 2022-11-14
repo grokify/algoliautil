@@ -10,7 +10,7 @@ import (
 
 // go get github.com/algolia/algoliasearch-client-go/v3@v3.14.0
 
-const EnvVarAppCredentialsJSON = "ALGOLIA_APP_CREDENTIALS_JSON"
+const EnvVarAppCredentialsJSON = "ALGOLIA_APP_CREDENTIALS_JSON" // #nosec G101
 
 type Credentials struct {
 	ApplicationID    string `json:"applicationId"`

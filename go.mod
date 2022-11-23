@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/algolia/algoliasearch-client-go/v3 v3.26.1
-	github.com/grokify/mogo v0.41.1
+	github.com/grokify/mogo v0.41.4
 	github.com/jessevdk/go-flags v1.5.0
 )
 
@@ -14,6 +14,6 @@ require (
 	github.com/huandu/xstrings v1.3.3 // indirect
 	github.com/joho/godotenv v1.4.0 // indirect
 	github.com/valyala/fastjson v1.6.3 // indirect
-	golang.org/x/exp v0.0.0-20221111204811-129d8d6c17ab // indirect
+	golang.org/x/exp v0.0.0-20221114191408-850992195362 // indirect
 	golang.org/x/sys v0.2.0 // indirect
 )

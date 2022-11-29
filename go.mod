@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/algolia/algoliasearch-client-go/v3 v3.26.1
-	github.com/grokify/mogo v0.41.6
+	github.com/grokify/mogo v0.41.10
 	github.com/jessevdk/go-flags v1.5.0
 )
 

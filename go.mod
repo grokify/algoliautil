@@ -3,7 +3,7 @@ module github.com/grokify/algoliautil
 go 1.18
 
 require (
-	github.com/algolia/algoliasearch-client-go/v3 v3.29.2
+	github.com/algolia/algoliasearch-client-go/v3 v3.29.4
 	github.com/grokify/mogo v0.49.1
 	github.com/jessevdk/go-flags v1.5.0
 )

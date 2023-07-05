@@ -1,5 +1,5 @@
-github.com/algolia/algoliasearch-client-go/v3 v3.30.0 h1:sZvynLYzLrDok2uqQoN3JmUkRUbs4HvLmdf1uvGFXL8=
-github.com/algolia/algoliasearch-client-go/v3 v3.30.0/go.mod h1:i7tLoP7TYDmHX3Q7vkIOL4syVse/k5VJ+k0i8WqFiJk=
+github.com/algolia/algoliasearch-client-go/v3 v3.30.1 h1:CAH0G4GbLqPZuut7W1WMcsvVr4cvKx3DZxs6uYH5+cg=
+github.com/algolia/algoliasearch-client-go/v3 v3.30.1/go.mod h1:i7tLoP7TYDmHX3Q7vkIOL4syVse/k5VJ+k0i8WqFiJk=
 github.com/buger/jsonparser v1.1.1 h1:2PnMjfWD7wBILjqQbt530v576A/cAbQvEW9gGIpYMUs=
 github.com/buger/jsonparser v1.1.1/go.mod h1:6RYKKt7H4d4+iWqouImQ9R2FZql3VbhNgx27UK13J/0=
 github.com/caarlos0/env/v6 v6.10.1 h1:t1mPSxNpei6M5yAeu1qtRdPAK29Nbcf/n3G7x+b3/II=

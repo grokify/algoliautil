@@ -9,7 +9,7 @@ CLI and SDK utilities for Algolia.
 
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/algoliautil/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/algoliautil?badge
- [build-status-svg]: https://github.com/grokify/algoliautil/workflows/build/badge.svg
+ [build-status-svg]: https://github.com/grokify/algoliautil/workflows/test/badge.svg
  [build-status-url]: https://github.com/grokify/algoliautil/actions
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/algoliautil
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/algoliautil

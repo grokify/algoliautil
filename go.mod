@@ -6,7 +6,7 @@ go 1.21
 
 require (
 	github.com/algolia/algoliasearch-client-go/v3 v3.31.0
-	github.com/grokify/mogo v0.62.2
+	github.com/grokify/mogo v0.62.3
 	github.com/jessevdk/go-flags v1.5.0
 )
 

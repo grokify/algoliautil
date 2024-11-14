@@ -5,7 +5,7 @@ go 1.22.0
 toolchain go1.22.2
 
 require (
-	github.com/algolia/algoliasearch-client-go/v3 v3.31.3
+	github.com/algolia/algoliasearch-client-go/v3 v3.31.4
 	github.com/grokify/mogo v0.64.11
 	github.com/jessevdk/go-flags v1.6.1
 )
